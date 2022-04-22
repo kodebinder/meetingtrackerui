@@ -1,0 +1,28 @@
+<h1>Meetings</h1>
+
+<script>
+    $(document).ready(function () {
+        $('#dataTable').DataTable();
+    });
+</script>
+
+<div class="container">
+    <table #dataTable class="table display row-border hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Is Completed?</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let meeting of meetings">
+                <td>{{meeting.id}}</td>
+                <td>{{meeting.description}}</td>
+                <td>{{meeting.done}}</td>
+                <td>{{meeting.targetDate | date: "MMM d, y, h:mm:ss a"}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

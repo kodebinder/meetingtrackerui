@@ -1,0 +1,13 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table,
+th,
+td {
+    border: none;
+    text-align: center;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
