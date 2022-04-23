@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CustomvalidationService } from 'src/app/service/customvalidation.service';
+import { CustomValidationService } from 'src/app/service/validation/custom-validation.service';
 
 @Component({
   selector: 'app-feedback',
@@ -15,7 +15,7 @@ export class FeedbackComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private customValidator: CustomvalidationService
+    private customValidator: CustomValidationService
   ) { }
 
   ngOnInit() {
