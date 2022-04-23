@@ -19,7 +19,7 @@ h5 {
 }
 
 h6 {
-    color: orange
+    color: lightblue
 }
 
 p {
@@ -66,6 +66,21 @@ th,
 td {
     border: none;
     text-align: center;
-    border-spacing: 10px;
+    border-spacing: 20px;
     border-collapse: separate;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+input[type=radio] {
+    border: none;
+    display: flexbox;
 }

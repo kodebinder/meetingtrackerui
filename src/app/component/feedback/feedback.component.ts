@@ -20,6 +20,24 @@ export class FeedbackComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = this.fb.group({
+      rateProductivity: ['', Validators.required],
+      rateHowProductiveMeetingWas: ['', Validators.required],
+
+      rateObjectivesCommunication: ['', Validators.required],
+      rateFollowUpActionsResult: ['', Validators.required],
+      rateOwnersWereAssignedAction: ['', Validators.required],
+      rateMeetingLeader: ['', Validators.required],
+      rateParticipationOpportunity: ['', Validators.required],
+      rateInvitedRightCandidates: ['', Validators.required],
+
+      rateIsMeetingStartedTimely: ['', Validators.required],
+      rateIsMeetingEndedTimely: ['', Validators.required],
+
+      rateMeetingOrganizer: ['', Validators.required],
+      rateMostEffectiveThingAboutMeeting: ['', Validators.required],
+      rateLeastEffectiveThingAboutMeeting: ['', Validators.required],
+
+      employeeid: ['', Validators.required],
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       username: ['', [Validators.required], this.customValidator.userNameValidator.bind(this.customValidator)],
@@ -39,7 +57,7 @@ export class FeedbackComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.registerForm.valid) {
-      alert('Form Submitted succesfully!!!\n Check the values in browser console.');
+      alert('Form Submitted succesfully!!!\nCheck the values in browser console.');
       console.table(this.registerForm.value);
     }
   }

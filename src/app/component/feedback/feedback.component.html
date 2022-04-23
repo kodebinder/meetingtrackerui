@@ -10,7 +10,226 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    <ul class="b">
+                        <li>Please share your feedback regarding the recent meeting in this very brief survey. We
+                            appreciate your candid responses.</li>
+                        <li>Please tell us how productive the meeting was using a 1 to 5 scale where 1 means not at all
+                            productive and 5 means extremely productive.</li>
+                    </ul>
                     <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td>Not at all productive</td>
+                                    <td>A little productive</td>
+                                    <td>Neutral</td>
+                                    <td>Mostly productive</td>
+                                    <td>Extremely productive</td>
+                                </tr>
+                                <tr>
+                                    <td>How productive was the meeting?</td>
+                                    <td><input type="radio" value="1" class="form-control"
+                                            formControlName="rateProductivity">1</td>
+                                    <td><input type="radio" value="2" class="form-control"
+                                            formControlName="rateProductivity">2</td>
+                                    <td><input type="radio" value="3" class="form-control"
+                                            formControlName="rateProductivity">3</td>
+                                    <td><input type="radio" value="4" class="form-control"
+                                            formControlName="rateProductivity">4</td>
+                                    <td><input type="radio" value="5" class="form-control"
+                                            formControlName="rateProductivity">5</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <label>Please tell us why you feel that way about how productive the meeting
+                                        was.</label>
+                                </tr>
+                                <tr>
+                                    <textarea class="form-control" formControlName="rateHowProductiveMeetingWas">
+
+                                    </textarea>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <ul class="b">
+                                <li>Now we have a few questions about the meeting content and its organization.</li>
+                                <li>Please tell us your level of agreement with the following statements about the
+                                    meeting using a 1 to 5 scale, where 1 means you strongly disagree and 5 means you
+                                    strongly agree.</li>
+                                <li>If a statement does not apply to the meeting you attended, please select "NA."</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td>Strongly Disagree</td>
+                                    <td>Disagree</td>
+                                    <td>Neutral</td>
+                                    <td>Agree</td>
+                                    <td>Strongly Agree</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <td>The meeting objectives were clearly communicated in advance of the meeting</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateObjectivesCommunication" value="1">1</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateObjectivesCommunication" value="2">2</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateObjectivesCommunication" value="3">3</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateObjectivesCommunication" value="4">4</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateObjectivesCommunication" value="5">5</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateObjectivesCommunication" value="-">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Follow-up actions resulted from the meeting</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateFollowUpActionsResult" value="1">1</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateFollowUpActionsResult" value="2">2</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateFollowUpActionsResult" value="3">3</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateFollowUpActionsResult" value="4">4</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateFollowUpActionsResult" value="5">5</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateFollowUpActionsResult" value="-">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Owners of follow-up actions were assigned</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateOwnersWereAssignedAction" value="1">1</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateOwnersWereAssignedAction" value="2">2</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateOwnersWereAssignedAction" value="3">3</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateOwnersWereAssignedAction" value="4">4</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateOwnersWereAssignedAction" value="5">5</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateOwnersWereAssignedAction" value="-">-</td>
+                                </tr>
+                                <tr>
+                                    <td>The meeting leader(s) effectively moderated the meeting</td>
+                                    <td><input type="radio" class="form-control" formControlName="rateMeetingLeader"
+                                            value="1">1</td>
+                                    <td><input type="radio" class="form-control" formControlName="rateMeetingLeader"
+                                            value="2">2</td>
+                                    <td><input type="radio" class="form-control" formControlName="rateMeetingLeader"
+                                            value="3">3</td>
+                                    <td><input type="radio" class="form-control" formControlName="rateMeetingLeader"
+                                            value="4">4</td>
+                                    <td><input type="radio" class="form-control" formControlName="rateMeetingLeader"
+                                            value="5">5</td>
+                                    <td><input type="radio" class="form-control" formControlName="rateMeetingLeader"
+                                            value="-">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Meeting attendees had an opportunity to participate</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateParticipationOpportunity" value="1">1</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateParticipationOpportunity" value="2">2</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateParticipationOpportunity" value="3">3</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateParticipationOpportunity" value="4">4</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateParticipationOpportunity" value="5">5</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateParticipationOpportunity" value="-">-</td>
+                                </tr>
+                                <tr>
+                                    <td>The right people were invited to the meeting</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateInvitedRightCandidates" value="1">1</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateInvitedRightCandidates" value="2">2</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateInvitedRightCandidates" value="3">3</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateInvitedRightCandidates" value="4">4</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateInvitedRightCandidates" value="5">5</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateInvitedRightCandidates" value="-">-</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <td>Did the meeting start on time?</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateIsMeetingStartedTimely" value="Yes">Yes</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateIsMeetingStartedTimely" value="No">No</td>
+                                </tr>
+                                <tr>
+                                    <td>Did the meeting end on time?</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateIsMeetingEndedTimely" value="Yes">Yes</td>
+                                    <td><input type="radio" class="form-control"
+                                            formControlName="rateIsMeetingEndedTimely" value="No">No</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <label>Who was the meeting organizer?</label>
+                                </tr>
+                                <tr>
+                                    <textarea class="form-control" formControlName="rateMeetingOrganizer">
+
+                                    </textarea>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <label>What did you find most effective about the meeting?</label>
+                                </tr>
+                                <tr>
+                                    <textarea class="form-control" formControlName="rateMostEffectiveThingAboutMeeting">
+
+                                    </textarea>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <label>What did you find least effective about the meeting?</label>
+                                </tr>
+                                <tr>
+                                    <textarea class="form-control"
+                                        formControlName="rateLeastEffectiveThingAboutMeeting">
+
+                                    </textarea>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <label>Employee ID</label>
+                            <input type="text" class="form-control" formControlName="employeeid">
+                            <span class="text-danger"
+                                *ngIf="(registerFormControl.employeeid.touched || submitted) && registerFormControl.employeeid.errors?.required">
+                                Employee ID is required
+                            </span>
+                        </div>
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" class="form-control" formControlName="name">
